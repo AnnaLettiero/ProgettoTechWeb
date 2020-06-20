@@ -1,0 +1,9 @@
+{% extends "layout.html"%}
+{% block content %}
+    {% for review in reviews %}
+        <h1>{{ review.book.title }} </h1>
+        <p>Giudizio: {{review.type }}<br><br>Contenuto:<br>{{ review.content }} </p>
+        <p>Autore del libro: {{review.book.author}}</p>
+        <p>Recensione a cura di: {{ review.author.username }} Data: {{ review.reviewdate }} </p>
+    {% endfor %}
+{% endblock content %}

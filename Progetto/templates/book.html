@@ -1,0 +1,10 @@
+{% extends "layout.html"%}
+{% block content %}
+    {% for book in books %}
+        <h1><a href="/bookview/{{book.idbook}}">{{book.title }}</a></h1>
+        <p>Autore del libro: {{book.author}}</p>
+        <p>{{ book.publisher }} </p>
+        <p>Data pubblicazione: {{ book.releasedate }} </p>
+    {% endfor %}
+{% endblock content %}
+
